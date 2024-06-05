@@ -1,9 +1,19 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { useNavigate, Link } from "react-router-dom";
 
-function MovieCard({ title, description, rating, posterURL }) {
+function MovieCard({ id, title, description, rating, posterURL }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${id}`);
+  };
   return (
-    <Card className="singleCard">
+    <Card
+      className="singleCard"
+      onClick={handleClick}
+      style={{ cursor: "pointer" }}
+    >
       <Card.Img variant="top" src={posterURL} alt={title} />
       <Card.Body className="cardBody">
         <Card.Title className="movieTitle">{title}</Card.Title>
@@ -18,7 +28,7 @@ function MovieCard({ title, description, rating, posterURL }) {
             }}
           >
             {rating}
-          </h5>{" "}
+          </h5>
         </Card.Text>
       </Card.Body>
     </Card>
@@ -26,6 +36,7 @@ function MovieCard({ title, description, rating, posterURL }) {
 }
 
 MovieCard.defaultProps = {
+  id: 5,
   title: "Unknown",
   description: "Unknown",
   rating: 0,

@@ -1,27 +1,33 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import MovieList from "./MovieList";
 import AddMovie from "./AddMovie";
-import moviesData from "./movies"; // Changed import name to avoid conflict
-import { useState } from "react";
+import moviesData from "./movies";
+import MovieDetail from "./MovieDetail";
 
 function App() {
   const [movies, setMovies] = useState(moviesData);
 
   const handleAddMovie = (newMovie) => {
-    // Create a new array with the existing movies and the new movie
-    console.log("On AddMovie newMoviw : ", newMovie);
     setMovies([...movies, newMovie]);
   };
 
   return (
-    <>
+    <div>
       <h2 style={{ textAlign: "center", marginTop: "50px" }}>
         <span>|</span> Movies{" "}
       </h2>
-
-      <MovieList movies={movies} />
-      <AddMovie onAddMovie={handleAddMovie} />
-    </>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MovieList movies={movies} />} />
+          <Route path="/movie/:id" element={<MovieDetail movies={movies} />} />
+        </Routes>
+      </Router>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <AddMovie onAddMovie={handleAddMovie} />
+      </div>
+    </div>
   );
 }
 

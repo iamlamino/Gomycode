@@ -10,7 +10,7 @@ const Filter = ({
 }) => {
   return (
     <>
-      <div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <select
           value={filteredBy}
           onChange={(e) => setFilteredBy(e.target.value)}

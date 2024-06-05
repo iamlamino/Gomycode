@@ -42,7 +42,7 @@ const MovieList = ({ movies }) => {
       />
       <div style={movieListStyle}>
         {filteredMovies.map((movie, index) => (
-          <MovieCard key={index} {...movie} />
+          <MovieCard key={index} id={index} {...movie} />
         ))}
       </div>
     </>

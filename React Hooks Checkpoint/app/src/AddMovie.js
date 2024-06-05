@@ -30,7 +30,7 @@ const AddMovie = ({ onAddMovie }) => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h2>Add a New Movie</h2>
       <input
         type="text"
