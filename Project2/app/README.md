@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# To-Do List Application
+
+This is a simple To-Do List application built with React. It allows users to add, edit, delete, and mark tasks as completed. The application also uses localStorage to persist tasks between sessions.
+
+The application will be available at `http://localhost:3000`.
+
+## Features
+
+- Add new tasks with a name and description
+- Edit existing tasks
+- Delete tasks with a confirmation prompt
+- Mark tasks as completed
+- Persist tasks using localStorage
+- Basic form validation
+
+## Additional Information
+
+Feel free to modify and enhance the application as needed. Contributions are welcome!
