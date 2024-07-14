@@ -1,11 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import NavbarComponent from "./NavbarComponent";
 import HeadingComponent from "./HeadingComponent";
 import CardComponent from "./CardComponent";
 import paris from "./images/paris.jpg";
 import brésil from "./images/brazil.jpg";
 import dakar from "./images/dakar.jpg";
+import "./index.css";
+import QRCode from "qrcode";
 
 function App() {
   const cardsData = [

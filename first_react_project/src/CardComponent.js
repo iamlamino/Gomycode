@@ -9,7 +9,7 @@ function CardComponent({ title, text, imgSrc }) {
         <Card.Body className="">
           <Card.Title>{title}</Card.Title>
           <Card.Text>{text}</Card.Text>
-          <Button variant="primary">Boutton</Button>
+          <Button variant="warning">Boutton</Button>
         </Card.Body>
       </Card>
     </Col>

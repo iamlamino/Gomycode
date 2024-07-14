@@ -22,11 +22,11 @@ const UserList = () => {
   return (
     <div>
       <h1>List of Users</h1>
-      <ul>
+      <li>
         {listOfUsers.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
-      </ul>
+      </li>
     </div>
   );
 };

@@ -5,7 +5,6 @@ const MovieDetail = ({ movies }) => {
   const { id } = useParams();
   const movie = movies.find((movie) => movie.id === parseInt(id));
   if (!movie) {
-    console.log({ id });
     return <h2>Ce film n'exite pas</h2>;
   }
 
@@ -27,7 +26,6 @@ const MovieDetail = ({ movies }) => {
           height="315"
           src={movie.trailerLink}
           title={movie.title}
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
