@@ -1,17 +1,25 @@
+// src/App.js
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store, persistor } from './Redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AddTask from './Components/AddTask';
 import ListTask from './Components/ListTask';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import "./App.css"
 
-function App() {
+const App = () => {
   return (
-    <div className="container mt-5">
-      <h1 className="mb-4">Todo List</h1>
-      <AddTask />
-      <ListTask />
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <div className="container mt-5">
+          <h1 className="text-center">Todo List</h1>
+          <AddTask />
+          <ListTask />
+        </div>
+      </PersistGate>
+    </Provider>
   );
-}
+};
 
 export default App;

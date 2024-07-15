@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 .custom:hover{
-  background-color:rgb(19, 116, 220);
+  background-color:#5aaaff;
 }
 @keyframes App-logo-spin {
   from {
