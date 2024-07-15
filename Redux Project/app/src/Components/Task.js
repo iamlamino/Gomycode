@@ -30,12 +30,10 @@ const Task = ({ task }) => {
         {task.description}
       </span>
       <button className="btn btn-success btn-sm" onClick={handleEdit}>
-        
         Edit
       </button>
       <span>
         <button className="btn btn-danger btn-sm" onClick={handleDelete}>
-        
         Delete 
       </button>
         </span>
